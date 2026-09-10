@@ -4,6 +4,20 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.3.0] - 2026-09-10
+
+### Added
+- **`releases.html`/`releases.js`**: lists every TS4RLS/Engine GitHub
+  Release, fetched live from the API — platform-labeled asset download
+  buttons (Windows/macOS/Linux, plus the Steam assets zip), release notes
+  rendered from each release's body, and a standing notice that the
+  text-menu CLI was discontinued in Engine v3.0.0 (older releases still
+  show their CLI-era asset names for reference, since they predate the
+  naming pattern this page otherwise labels).
+- `.hero-warning` and `.profiles-hero` styles in `style.css` (the rest of
+  the releases-page CSS — `.release-*`, `.page-title` — was already
+  carried over from the TIGHC/TWRAR pattern, just unused until now).
+
 ## [1.2.2] - 2026-09-10
 
 ### Fixed

@@ -221,6 +221,11 @@ code {
   margin-bottom: 22px;
 }
 .hero-meta { margin-bottom: 10px; }
+.hero-warning { color: var(--text-dim); font-size: 0.85rem; }
+
+/* Generic sub-page hero (Engine, Releases, Changelogs) */
+.profiles-hero { padding: 56px 0 40px; }
+.profiles-hero .hero-meta { margin-bottom: 12px; }
 
 .badge {
   display: inline-block;

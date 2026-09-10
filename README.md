@@ -4,7 +4,7 @@
 
 # TS4RLS Website
 
-**Version 1.2.2** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.3.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [ts4rls.stuxie.dev](https://ts4rls.stuxie.dev), the landing site
 for [TS4RLS](https://github.com/TS4RLS/Engine) (The Sims 4 Random Loading
@@ -19,8 +19,10 @@ License: [GPL-3.0-or-later](LICENSE.md)
 
 ```
 index.html          # landing page — what TS4RLS is, features, how it works, get started
+releases.html       # TS4RLS Engine releases, fetched live from the GitHub Releases API
 style.css           # shared styles
 versions.js         # fetches VERSION.md from Engine/Website on load, populates version badges
+releases.js         # fetches and renders TS4RLS/Engine's GitHub releases for releases.html
 assets/             # logo/icon/author avatar, copied from the Engine repo's assets/
 assets/fontawesome/ # Font Awesome Free (vendored, self-hosted — see its own LICENSE.txt)
 dev-server.py       # local dev server shared by dev-server.sh/.bat (see Local preview below)
@@ -29,10 +31,9 @@ dev-server.bat      # Windows wrapper for dev-server.py
 CNAME               # custom domain (ts4rls.stuxie.dev) for GitHub Pages
 ```
 
-This is an early, single-page version of the site — more pages (usage
-docs, Steam guide, changelog viewer, releases, a legal hub) and the
-scripts behind them (theme/nav toggle, live version badges) are planned;
-see [TIGHC/Website](https://github.com/TIGHC/Website) for the fuller
+More pages (usage docs, Steam guide, a changelog viewer, a legal hub) and
+the scripts behind the header's theme/nav toggle are still planned; see
+[TIGHC/Website](https://github.com/TIGHC/Website) for the fuller
 pattern this site will grow into.
 
 ## Local preview
