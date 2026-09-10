@@ -4,6 +4,14 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.2.2] - 2026-09-10
+
+### Fixed
+- `commit.sh`/`dev-server.sh` were committed without the executable bit
+  (git tracked them as `100644` instead of `100755`) — found while fixing
+  the identical issue in Engine's `build.sh`, which actually broke a
+  release there. Not yet CI-invoked here, but worth the same fix.
+
 ## [1.2.1] - 2026-09-10
 
 ### Fixed
