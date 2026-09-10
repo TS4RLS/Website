@@ -4,6 +4,21 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.2.1] - 2026-09-10
+
+### Fixed
+- **Dev Mode banner showed in production.** `.env-banner { display: flex }`
+  overrode the `hidden` attribute's default styling (an author-stylesheet
+  rule always beats the user-agent stylesheet at equal specificity), so
+  the banner was visible on every page load regardless of whether
+  `dev-config.js` had actually revealed it. Added `.env-banner[hidden] {
+  display: none; }` (present in TIGHC's Website, missing here). Verified
+  with a plain static server (no `dev-server.py` involved): banner now
+  stays hidden.
+- Synced `assets/logo.png` with Engine's updated brand mark again — bold
+  weight, not just matching color, is what actually made the subtitle
+  read clearly.
+
 ## [1.2.0] - 2026-09-10
 
 ### Added
