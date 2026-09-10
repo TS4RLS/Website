@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>(function () {
+  try {
+    var t = localStorage.getItem("ts4rls-theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TS4RLS — The Sims 4 Random Loading Screen</title>
+<meta name="description" content="TS4RLS automatically picks a random image and installs it as your Sims 4 loading screen — a single self-contained app with a GUI and a headless mode for unattended use.">
+<link rel="canonical" href="https://ts4rls.stuxie.dev/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TS4RLS">
+<meta property="og:title" content="TS4RLS — The Sims 4 Random Loading Screen">
+<meta property="og:description" content="TS4RLS automatically picks a random image and installs it as your Sims 4 loading screen — a single self-contained app with a GUI and a headless mode for unattended use.">
+<meta property="og:url" content="https://ts4rls.stuxie.dev/">
+<meta property="og:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.0.0">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TS4RLS — The Sims 4 Random Loading Screen">
+<meta name="twitter:description" content="TS4RLS automatically picks a random image and installs it as your Sims 4 loading screen — a single self-contained app with a GUI and a headless mode for unattended use.">
+<meta name="twitter:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.0.0">
+<link rel="icon" type="image/png" href="assets/icon.png?v=1.0.0">
+<link rel="shortcut icon" href="assets/favicon.ico?v=1.0.0">
+<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css?v=6.7.2">
+<link rel="stylesheet" href="assets/fontawesome/css/solid.min.css?v=6.7.2">
+<link rel="stylesheet" href="assets/fontawesome/css/brands.min.css?v=6.7.2">
+<link rel="stylesheet" href="style.css?v=1.0.0">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png?v=1.0.0" alt="TS4RLS" class="brand-logo">
+    </a>
+    <nav class="site-nav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="/engine">Engine</a>
+      <a href="/steam">Steam</a>
+      <a href="/changelogs">Changelogs</a>
+      <a href="/releases">Releases</a>
+      <a href="#get-started">Get started</a>
+      <a href="https://github.com/TS4RLS/Engine" class="nav-gh"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+    </nav>
+    <div class="header-controls">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <img src="assets/logo.png?v=1.0.0" alt="TS4RLS — The Sims 4 Random Loading Screen" class="hero-logo">
+      <p class="hero-tagline">A fresh Sims 4 loading screen, every time you play.</p>
+      <p class="hero-sub">
+        TS4RLS picks a random image from a folder you choose and installs
+        it as your Sims 4 loading screen mod — a single self-contained app
+        with a GUI and a headless mode for unattended use.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/TS4RLS/Engine" class="btn btn-accent">View on GitHub</a>
+        <a href="#get-started" class="btn btn-ghost">Get started</a>
+      </div>
+      <p class="hero-meta">
+        <span class="badge" data-version="engine">vX.Y.Z</span>
+        <span class="badge">Windows · macOS · Linux</span>
+        <span class="badge">Single executable</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>What it does</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Random, every launch</h3>
+          <p>Drop PNG/JPG/BMP/WebP/TIFF images into a folder. Each run
+          picks one at random (or two, in vertical mode) and splices it
+          into a real Sims 4 loading-screen <code>.package</code> file.</p>
+        </div>
+        <div class="card">
+          <h3>Vertical combine mode</h3>
+          <p>Pair two portrait-oriented images side-by-side into one
+          landscape loading screen automatically — great for phone-camera
+          photos and portrait art.</p>
+        </div>
+        <div class="card">
+          <h3>GUI or headless</h3>
+          <p>Double-click for a desktop GUI, or run with
+          <code>--generate</code> for a silent one-shot — the same single
+          executable does both.</p>
+        </div>
+        <div class="card">
+          <h3>Steam artwork included</h3>
+          <p>A full set of Steam library artwork (capsules, hero, logo)
+          ships with the app — see the <a href="/steam">Steam guide</a>.</p>
+        </div>
+        <div class="card">
+          <h3>Settings that follow you</h3>
+          <p>Configuration lives in your OS's per-user app-data
+          directory, not next to the executable — move or update the app
+          freely without losing your setup.</p>
+        </div>
+        <div class="card">
+          <h3>Safe by default</h3>
+          <p>Only ever writes a single <code>.package</code> file to your
+          Mods folder — no auto-launching your game, and it warns you if
+          it finds a leftover mod from an older version before generating
+          a new one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section section-alt">
+    <div class="container">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <div>
+            <h3>First run</h3>
+            <p>The Build tab asks for your images folder and Sims 4 Mods
+            folder, then saves your settings for next time.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div>
+            <h3>Generate</h3>
+            <p>TS4RLS scans the images folder, picks one (or two) at
+            random, resizes/centre-crops it, and splices it into the
+            loading-screen template.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div>
+            <h3>Install</h3>
+            <p>The finished <code>.package</code> is written straight to
+            your Sims 4 <code>Mods</code> folder as
+            <code>TS4RLS.package</code>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div>
+            <h3>Play</h3>
+            <p>Launch Sims 4 yourself and enjoy a new loading screen. Run
+            it again any time for another random pick.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="get-started" class="section section-alt">
+    <div class="container">
+      <h2>Get started</h2>
+      <p class="section-lede">
+        Grab the latest executable from the
+        <a href="/releases">Releases page</a> — a single self-contained
+        file, nothing else to install.
+      </p>
+      <pre class="code-block"><code>TS4RLS                  # double-click for the GUI
+TS4RLS --generate        # headless, one-shot</code></pre>
+      <p class="section-note">
+        Prefer running from source? See the
+        <a href="https://github.com/TS4RLS/Engine" target="_blank" rel="noopener">Engine repository</a>
+        for the full developer setup.
+      </p>
+      <div class="hero-actions get-started-actions">
+        <a href="/engine" class="btn btn-accent">Full usage docs</a>
+        <a href="/releases" class="btn btn-ghost">Releases</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-brand-link">
+        <img src="assets/icon.png?v=1.0.0" alt="" class="footer-icon">
+        <span>TS4RLS</span>
+      </a>
+      <p class="footer-tagline">The Sims 4 Random Loading Screen</p>
+      <p class="footer-versions">
+        <span data-version="engine" data-version-prefix="Engine ">Engine vX.Y.Z</span>
+        <span data-version="website" data-version-prefix="Website ">Website v1.0.0</span>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-heading">Project</h3>
+      <a href="https://github.com/TS4RLS/Engine"><i class="fa-brands fa-github" aria-hidden="true"></i> Engine repo</a>
+      <a href="https://github.com/TS4RLS/Website"><i class="fa-brands fa-github" aria-hidden="true"></i> Website repo</a>
+      <a href="/releases"><i class="fa-solid fa-download" aria-hidden="true"></i> Releases</a>
+      <a href="/changelogs"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Changelogs</a>
+    </div>
+    <div class="footer-col">
+      <h3 class="footer-heading">More</h3>
+      <a href="/steam"><i class="fa-brands fa-steam" aria-hidden="true"></i> Steam guide</a>
+      <a href="https://github.com/TS4RLS/Engine/issues"><i class="fa-solid fa-comment" aria-hidden="true"></i> Issues &amp; contact</a>
+      <a href="https://projects.stuxie.dev">Written &amp; Maintained by <img src="https://github.com/StuxieDev.png" alt="" class="footer-avatar"> StuxieDev</a>
+      <a href="/legal"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Boring Legal Stuff</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="footer-note">
+        Unaffiliated with Electronic Arts or Maxis. The Sims and The Sims 4
+        are trademarks of Electronic Arts Inc.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js?v=1.0.0"></script>
+<script src="dev-config.js?v=1.0.0"></script>
+<script src="versions.js?v=1.0.0"></script>
+</body>
+</html>
