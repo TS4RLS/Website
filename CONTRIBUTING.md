@@ -9,8 +9,9 @@ Issues and pull requests are welcome at
 
 ## Getting set up
 
-No build tooling required — plain HTML/CSS. Open `index.html` directly in
-a browser, or serve the folder with any static file server.
+No build tooling required — plain HTML/CSS. Run `./dev-server.sh` (or
+`dev-server.bat` on Windows) and open http://127.0.0.1:8000, or just open
+`index.html` directly in a browser.
 
 ## Making a change
 
@@ -18,6 +19,11 @@ a browser, or serve the folder with any static file server.
   CSS unless there's a good reason.
 - Icons come from the vendored Font Awesome build under
   `assets/fontawesome/` — don't load icons from a CDN.
+- If you add a script that reads Engine's `VERSION.md`/`CHANGELOG.md`,
+  test it with `./dev-server.sh`/`dev-server.bat` (not `file://`), since
+  `fetch` needs an HTTP origin — it proxies `/dev-sibling/engine` to a
+  sibling `../Engine` checkout so local edits show up without pushing
+  first.
 
 ## Versioning
 

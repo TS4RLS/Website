@@ -1,2 +1,5 @@
+# Written by dev-server.py at startup — never deployed, config is per-machine
+dev-config.js
+
 .DS_Store
 Thumbs.db

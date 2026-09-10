@@ -4,7 +4,7 @@
 
 # TS4RLS Website
 
-**Version 1.0.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.1.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [ts4rls.stuxie.dev](https://ts4rls.stuxie.dev), the landing site
 for [TS4RLS](https://github.com/TS4RLS/Engine) (The Sims 4 Random Loading
@@ -22,6 +22,9 @@ index.html          # landing page — what TS4RLS is, features, how it works, g
 style.css           # shared styles
 assets/             # logo/icon/author avatar, copied from the Engine repo's assets/
 assets/fontawesome/ # Font Awesome Free (vendored, self-hosted — see its own LICENSE.txt)
+dev-server.py       # local dev server shared by dev-server.sh/.bat (see Local preview below)
+dev-server.sh       # Unix wrapper for dev-server.py
+dev-server.bat      # Windows wrapper for dev-server.py
 CNAME               # custom domain (ts4rls.stuxie.dev) for GitHub Pages
 ```
 
@@ -30,6 +33,21 @@ docs, Steam guide, changelog viewer, releases, a legal hub) and the
 scripts behind them (theme/nav toggle, live version badges) are planned;
 see [TIGHC/Website](https://github.com/TIGHC/Website) for the fuller
 pattern this site will grow into.
+
+## Local preview
+
+```
+./dev-server.sh      # or dev-server.bat on Windows
+```
+
+Serves this folder the way GitHub Pages does, at http://127.0.0.1:8000.
+`DEV_MODE` is forced on by default: it writes `dev-config.js` (gitignored,
+never deployed), which reveals the yellow "Development Mode" banner at the
+top of the page and proxies `/dev-sibling/engine` to a sibling `../Engine`
+checkout, so future scripts reading Engine's `VERSION.md`/`CHANGELOG.md`
+can use local edits without pushing first. Pass `--no-dev-mode` to test the
+site as it behaves in production (banner hidden) instead, and a port
+number to use something other than 8000.
 
 ## Versioning
 
