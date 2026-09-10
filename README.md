@@ -4,7 +4,7 @@
 
 # TS4RLS Website
 
-**Version 1.1.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.2.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [ts4rls.stuxie.dev](https://ts4rls.stuxie.dev), the landing site
 for [TS4RLS](https://github.com/TS4RLS/Engine) (The Sims 4 Random Loading
@@ -20,6 +20,7 @@ License: [GPL-3.0-or-later](LICENSE.md)
 ```
 index.html          # landing page — what TS4RLS is, features, how it works, get started
 style.css           # shared styles
+versions.js         # fetches VERSION.md from Engine/Website on load, populates version badges
 assets/             # logo/icon/author avatar, copied from the Engine repo's assets/
 assets/fontawesome/ # Font Awesome Free (vendored, self-hosted — see its own LICENSE.txt)
 dev-server.py       # local dev server shared by dev-server.sh/.bat (see Local preview below)

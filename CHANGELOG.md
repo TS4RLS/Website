@@ -4,6 +4,25 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.2.0] - 2026-09-10
+
+### Added
+- **`versions.js`**: fetches `VERSION.md` from Engine and this repo (from
+  GitHub in production, from the dev-sibling proxy in dev mode) and
+  populates every `[data-version]` element — the hero badge and footer
+  version line were both stuck on placeholder text (`vX.Y.Z`/a stale
+  hardcoded `v1.0.0`) with no script to fill them in.
+
+### Changed
+- Footer reorganized: "Written & Maintained by StuxieDev" (→ stuxie.dev)
+  is now the last link in the "More" column instead of sitting before
+  "Boring Legal Stuff"; "A StuxieDev Project" (→ projects.stuxie.dev) is
+  now its own link under the "Unaffiliated with EA/Maxis" note, rather
+  than being combined into one link.
+- Synced `assets/logo.png` with Engine's updated brand mark again — the
+  matching-color subtitle from the previous release was still too faint;
+  the real fix was the font weight (light → regular), not just the color.
+
 ## [1.1.0] - 2026-09-10
 
 ### Added
