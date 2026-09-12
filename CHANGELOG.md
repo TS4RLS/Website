@@ -4,6 +4,43 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.8.0] - 2026-09-12
+
+### Added
+- **`guides/install.html`** and **`guides/developer.html`** — deploying a
+  copy of this site (GitHub Pages/custom domain/any static host) and
+  running it locally (cloning alongside the Engine, `dev-server.py`, dev
+  mode), adapted from TIGHC's `INSTALL.md`/`DEV_GUIDE.md` content but as
+  guide pages instead of root-level markdown files, matching this site's
+  own `guides/` pattern. Linked from `/guides` and from the README's
+  "Local preview"/"Deploying" sections.
+- **`404.html`** — a custom error page (GitHub Pages serves it
+  automatically for any unmatched path in production); `dev-server.py`
+  now serves it locally too on a 404, instead of Python's generic error
+  page, so it can actually be previewed.
+
+### Changed
+- **`guides.html` → `guides/index.html`, `legal.html` → `legal/index.html`**
+  — each hub page now lives alongside its own sub-pages instead of
+  beside the folder. `steam.html` stays a flat file (it has no
+  sub-pages). All internal links were already root-relative
+  (`/guides`, `/legal`, ...) so nothing else needed updating; only the
+  moved pages' own relative asset/script paths gained a `../`.
+
+### Fixed
+- **`dev-server.py` couldn't resolve any of the site's clean URLs for
+  flat pages** (`/engine`, `/steam`, `/changelogs`, `/releases` all
+  404'd locally despite working in production) — `SimpleHTTPRequestHandler`
+  has no extension-optional resolution of its own. Ported the fix
+  already in the sibling TWRAR project's `dev-server.py`:
+  `translate_path()` now prefers `<path>.html` when it exists.
+- README's `Structure` section was badly stale — it still said the Steam
+  guide, changelog viewer, and legal hub were "still planned" when all
+  three have existed since earlier this session, and even after that fix
+  it was still an abbreviated summary rather than every actual file.
+  Rewrote it to exhaustively list the current file set, and added
+  `Deploying`/`Testing` sections.
+
 ## [1.7.0] - 2026-09-12
 
 ### Added

@@ -202,6 +202,7 @@ code {
   background: radial-gradient(ellipse at top, var(--hero-glow), transparent 60%);
 }
 .hero-logo { max-width: 340px; width: 100%; margin-bottom: 28px; }
+.error-code { font-size: 5rem; font-weight: 800; color: var(--accent); margin: 0 0 8px; line-height: 1; }
 .hero-tagline {
   font-size: 1.3rem;
   font-weight: 600;
