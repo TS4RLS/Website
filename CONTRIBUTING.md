@@ -30,7 +30,12 @@ No build tooling required — plain HTML/CSS. Run `./dev-server.sh` (or
 Bump [`VERSION.md`](VERSION.md) and add a matching entry to
 [`CHANGELOG.md`](CHANGELOG.md) in the same PR, following
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`),
-independent of the Engine's own version.
+independent of the Engine's own version. Also bump the `?v=X.Y.Z` query
+string on every `style.css`/`script.js`/`versions.js`/`changelogs.js`/
+`releases.js`/`logo.png`/`icon.png`/`favicon.ico`/`assets/steam/*`
+reference across every page, to that same version — it exists purely to
+bust browser caches on release, so it needs to move every time or
+visitors can keep serving a stale cached copy indefinitely.
 
 ## Deploying
 

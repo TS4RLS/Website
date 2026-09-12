@@ -4,6 +4,21 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.8.1] - 2026-09-12
+
+### Fixed
+- **Cache-busting `?v=` query strings were stuck at `1.3.0`** on every
+  page despite `VERSION.md` being at `1.8.0` — bumped every reference to
+  `?v=1.8.0`. Added a note to `CONTRIBUTING.md`'s Versioning section so
+  this gets bumped alongside `VERSION.md` on every future release instead
+  of going stale again.
+- `guides/steam.html` used root-absolute asset paths (`/assets/...`,
+  `/style.css`) while every sibling page under `guides/` uses relative
+  `../` paths — both worked, but it was an inconsistent convention.
+  Normalized to match, and moved its one remaining inline
+  `style="font-size:1.5rem;"` into a new `.page-title-sm` class (the last
+  inline style anywhere outside `steam.html`'s already-fixed images).
+
 ## [1.8.0] - 2026-09-12
 
 ### Added

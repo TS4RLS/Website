@@ -374,6 +374,7 @@ code {
 
 /* Generic sub-page title */
 .page-title { font-size: 2rem; margin: 0 0 16px; }
+.page-title-sm { font-size: 1.5rem; }
 
 /* Steam guide page */
 .steam-asset-grid {
