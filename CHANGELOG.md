@@ -4,6 +4,18 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.6.0] - 2026-09-12
+
+### Added
+- **`icon.png`** listed on `/guides/steam`'s asset table (256x256, Steam's
+  separate "Icon" custom-artwork slot) — matches the Engine's v5.1.0
+  addition of `assets/steam/icon.png`.
+
+### Changed
+- Refreshed the local `assets/steam/*.png` preview copies (also adding the
+  previously-missing `logo_horizontal.png`) to match the Engine's current
+  generated set.
+
 ## [1.5.0] - 2026-09-13
 
 ### Added
