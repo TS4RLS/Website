@@ -4,6 +4,17 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.6.1] - 2026-09-12
+
+### Fixed
+- **`/engine` and `/changelogs` were dead links** — every page's nav and
+  footer already linked to them, and `versions.js`/`style.css` already
+  had the supporting code, but the pages themselves were never created.
+  Added `engine.html` (install/usage guide), `changelogs.html` (live
+  changelog viewer for both repos, ported from the sibling TWRAR
+  project's pattern), `changelog.html` (singular → plural redirect), and
+  `changelogs.js` (fetches and renders each repo's `CHANGELOG.md`).
+
 ## [1.6.0] - 2026-09-12
 
 ### Added

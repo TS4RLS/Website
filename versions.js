@@ -32,7 +32,7 @@
           el.textContent = versionText(el.dataset.versionPrefix, ver);
         });
 
-        // Inline version spans inside tab buttons (a future changelogs page)
+        // Inline version spans inside tab buttons (the changelogs page)
         document.querySelectorAll("[data-version-inline]").forEach(function (el) {
           var ver = map[el.dataset.versionInline];
           if (ver) el.textContent = " v" + ver;
