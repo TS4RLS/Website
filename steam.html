@@ -9,19 +9,19 @@
   } catch (e) {}
 })();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Releases — TS4RLS</title>
-<meta name="description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<link rel="canonical" href="https://ts4rls.stuxie.dev/releases">
+<title>Steam artwork — TS4RLS</title>
+<meta name="description" content="Custom Steam library artwork for TS4RLS — grid capsules, hero, and logo, ready to apply to your non-Steam game shortcut.">
+<link rel="canonical" href="https://ts4rls.stuxie.dev/steam">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TS4RLS">
-<meta property="og:title" content="Releases — TS4RLS">
-<meta property="og:description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<meta property="og:url" content="https://ts4rls.stuxie.dev/releases">
-<meta property="og:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.3.0">
+<meta property="og:title" content="Steam artwork — TS4RLS">
+<meta property="og:description" content="Custom Steam library artwork for TS4RLS — grid capsules, hero, and logo, ready to apply to your non-Steam game shortcut.">
+<meta property="og:url" content="https://ts4rls.stuxie.dev/steam">
+<meta property="og:image" content="https://ts4rls.stuxie.dev/assets/steam/wide_cover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Releases — TS4RLS">
-<meta name="twitter:description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<meta name="twitter:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.3.0">
+<meta name="twitter:title" content="Steam artwork — TS4RLS">
+<meta name="twitter:description" content="Custom Steam library artwork for TS4RLS — grid capsules, hero, and logo, ready to apply to your non-Steam game shortcut.">
+<meta name="twitter:image" content="https://ts4rls.stuxie.dev/assets/steam/wide_cover.png">
 <link rel="icon" type="image/png" href="assets/icon.png?v=1.3.0">
 <link rel="shortcut icon" href="assets/favicon.ico?v=1.3.0">
 <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css?v=7.3.1">
@@ -42,9 +42,9 @@
       <a href="/#features">Features</a>
       <a href="/#how-it-works">How it works</a>
       <a href="/engine">Engine</a>
-      <a href="/steam">Steam</a>
+      <a href="/steam" class="active">Steam</a>
       <a href="/changelogs">Changelogs</a>
-      <a href="/releases" class="active">Releases</a>
+      <a href="/releases">Releases</a>
       <a href="/#get-started">Get started</a>
       <a href="https://github.com/TS4RLS/Engine" class="nav-gh"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
     </nav>
@@ -64,36 +64,37 @@
 
   <section class="hero profiles-hero">
     <div class="container hero-inner">
-      <h1 class="page-title">Releases</h1>
-      <p class="hero-meta">
-        <span class="badge" data-version="engine" data-version-prefix="Engine ">Engine vX.Y.Z</span>
-        <span class="badge">Windows &middot; macOS &middot; Linux</span>
-      </p>
+      <h1 class="page-title">Steam library artwork</h1>
       <p class="hero-sub">
-        Standalone executables — no Python install needed. Every release
-        below is fetched live from
-        <a href="https://github.com/TS4RLS/Engine/releases" target="_blank" rel="noopener">github.com/TS4RLS/Engine/releases</a>.
-      </p>
-      <p class="hero-warning">
-        The text-menu CLI was discontinued in Engine v3.0.0 and is no
-        longer built or supported — releases before that version still
-        list a CLI download for reference, but only the GUI (plus
-        <code>--generate</code> for headless use) ships from here on.
+        TS4RLS ships with a full set of custom Steam library artwork —
+        grid capsules, a hero banner, and a logo — for adding it to your
+        Steam library as a non-Steam game.
       </p>
       <div class="hero-actions">
-        <a href="/assets/steam" class="btn btn-ghost"><i class="fa-brands fa-steam" aria-hidden="true"></i> Download Steam artwork (.zip)</a>
+        <a href="/assets/steam" class="btn btn-accent"><i class="fa-brands fa-steam" aria-hidden="true"></i> Download the artwork (.zip)</a>
+        <a href="/guides/steam" class="btn btn-ghost">How to apply it</a>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-
-      <div id="releases-status" class="release-status">Loading releases from
-        <a href="https://github.com/TS4RLS/Engine/releases" target="_blank" rel="noopener">github.com/TS4RLS/Engine</a>&hellip;</div>
-
-      <div id="releases-list" class="release-list"></div>
-
+      <div class="grid grid-2">
+        <div class="card">
+          <img src="assets/steam/wide_cover.png" alt="TS4RLS Steam landscape grid capsule" style="width:100%; border-radius:8px; margin-bottom:14px;">
+          <h3>Grid capsules</h3>
+          <p>Portrait and landscape capsule art for the Steam library grid view.</p>
+        </div>
+        <div class="card">
+          <img src="assets/steam/background.png" alt="TS4RLS Steam library hero background" style="width:100%; border-radius:8px; margin-bottom:14px;">
+          <h3>Library hero &amp; logo</h3>
+          <p>The wide hero banner shown behind your library page, plus a transparent logo overlay.</p>
+        </div>
+      </div>
+      <p class="section-note">
+        Want the exact file sizes and how to apply each one in Steam? See the
+        <a href="/guides/steam">full guide</a>.
+      </p>
     </div>
   </section>
 
@@ -141,6 +142,5 @@
 <script src="script.js?v=1.3.0"></script>
 <script src="dev-config.js?v=1.3.0"></script>
 <script src="versions.js?v=1.3.0"></script>
-<script src="releases.js?v=1.3.0"></script>
 </body>
 </html>

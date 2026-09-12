@@ -4,7 +4,7 @@
 
 # TS4RLS Website
 
-**Version 1.3.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.4.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [ts4rls.stuxie.dev](https://ts4rls.stuxie.dev), the landing site
 for [TS4RLS](https://github.com/TS4RLS/Engine) (The Sims 4 Random Loading

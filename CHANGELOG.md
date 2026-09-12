@@ -4,6 +4,35 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.4.0] - 2026-09-12
+
+### Added
+- **`/steam`** (`steam.html`): a landing page for the Steam library
+  artwork — a couple of previews, a download button, and a link to the
+  full guide. Fixes every existing `/steam` link across the site (nav,
+  footer, the homepage's "Steam artwork included" card) that previously
+  404'd.
+- **`/guides/steam`** (`guides/steam.html`): the full "add TS4RLS to
+  Steam" guide — asset list (file/size/slot), the two setup steps, and
+  a link to the community screenshot walkthrough.
+- **`/assets/steam`** (`assets/steam.html`): redirects straight to the
+  latest `TS4RLS_Steam_Assets.zip` (meta-refresh + JS, with a manual
+  link as a fallback) — the single place that URL is hardcoded, so
+  `/steam`, `/guides/steam`, and the Releases page button all link here
+  instead of each repeating it.
+- `script.js`: never actually existed in this repo despite every page's
+  `<head>` loading it, so the theme toggle and mobile nav button have
+  been silently dead site-wide until now. Restored (mobile nav
+  open/close + theme toggle), matching the TIGHC/TWRAR sibling sites.
+- A "Download Steam artwork (.zip)" button on the Releases page hero,
+  linking to `/assets/steam`.
+
+### Changed
+- Footer's "Steam guide" link reworded to "Steam Artwork" and now points
+  straight at `/assets/steam` (the zip download) instead of a guide page
+  — `/guides/steam` is one click away from `/steam` for anyone who wants
+  the how-to instead. The homepage card's copy updated to match.
+
 ## [1.3.0] - 2026-09-10
 
 ### Added
