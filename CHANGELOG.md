@@ -4,6 +4,14 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.8.2] - 2026-09-12
+
+### Changed
+- Regenerated `assets/favicon.ico`, `assets/icon.png`, `assets/logo.png`
+  from the Engine's `src/build/create_project_assets.py`, which now writes
+  these directly instead of requiring a manual copy — kept in sync with
+  the app's current branding.
+
 ## [1.8.1] - 2026-09-12
 
 ### Fixed
