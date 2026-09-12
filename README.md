@@ -4,7 +4,7 @@
 
 # TS4RLS Website
 
-**Version 1.8.3** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.9.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [ts4rls.stuxie.dev](https://ts4rls.stuxie.dev), the landing site
 for [TS4RLS](https://github.com/TS4RLS/Engine) (The Sims 4 Random Loading
@@ -29,6 +29,7 @@ releases.html             # TS4RLS Engine releases, fetched live from the GitHub
 releases.js               # fetches and renders TS4RLS/Engine's GitHub releases for releases.html
 steam.html                # Steam library artwork landing hub (no sub-pages, so no /steam folder)
 404.html                  # custom error page, served automatically by GitHub Pages
+favicon.ico               # site-root copy browsers fall back to regardless of <link rel="icon">
 style.css                 # shared styles
 script.js                 # mobile nav toggle and the light/dark theme toggle
 versions.js               # fetches VERSION.md from Engine/Website on load, populates version badges

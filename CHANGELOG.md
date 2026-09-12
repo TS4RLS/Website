@@ -4,6 +4,14 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.9.0] - 2026-09-13
+
+### Added
+- **`favicon.ico`** at the site root, written by the Engine's
+  `create_project_assets.py` alongside the existing `assets/favicon.ico`
+  — browsers request `/favicon.ico` directly as a fallback regardless of
+  the `<link rel="icon">` tag in `<head>`.
+
 ## [1.8.3] - 2026-09-12
 
 ### Changed
