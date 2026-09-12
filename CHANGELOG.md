@@ -4,6 +4,19 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.8.3] - 2026-09-12
+
+### Changed
+- Regenerated `assets/favicon.ico`, `assets/icon.png`, `assets/logo.png`,
+  and `assets/steam/*` again from the Engine, which fixed the wordmark's
+  vertical alignment/canvas cropping, the icon's tile-pattern margins, and
+  a wordmark-crop bug in the Steam-art generator that clipped/overlapped
+  text in `assets/steam/logo.png` — see the Engine's v5.2.0 changelog for
+  details. `assets/steam/*` is now synced automatically by the Engine's
+  build script instead of needing a manual copy.
+- Bumped the site-wide cache-busting `?v=` query string from `1.8.0` to
+  `1.8.3` on every page, so browsers pick up the regenerated assets above.
+
 ## [1.8.2] - 2026-09-12
 
 ### Changed
