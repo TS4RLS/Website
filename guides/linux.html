@@ -9,25 +9,25 @@
   } catch (e) {}
 })();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Releases — TS4RLS</title>
-<meta name="description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<link rel="canonical" href="https://ts4rls.stuxie.dev/releases">
+<title>Linux Guide — TS4RLS</title>
+<meta name="description" content="Installing and running TS4RLS on Linux: the standalone binary, Tk system libraries, and finding your Mods folder under Proton.">
+<link rel="canonical" href="https://ts4rls.stuxie.dev/guides/linux">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TS4RLS">
-<meta property="og:title" content="Releases — TS4RLS">
-<meta property="og:description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<meta property="og:url" content="https://ts4rls.stuxie.dev/releases">
+<meta property="og:title" content="Linux Guide — TS4RLS">
+<meta property="og:description" content="Installing and running TS4RLS on Linux: the standalone binary, Tk system libraries, and finding your Mods folder under Proton.">
+<meta property="og:url" content="https://ts4rls.stuxie.dev/guides/linux">
 <meta property="og:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.3.0">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Releases — TS4RLS">
-<meta name="twitter:description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
+<meta name="twitter:title" content="Linux Guide — TS4RLS">
+<meta name="twitter:description" content="Installing and running TS4RLS on Linux: the standalone binary, Tk system libraries, and finding your Mods folder under Proton.">
 <meta name="twitter:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.3.0">
-<link rel="icon" type="image/png" href="assets/icon.png?v=1.3.0">
-<link rel="shortcut icon" href="assets/favicon.ico?v=1.3.0">
-<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css?v=7.3.1">
-<link rel="stylesheet" href="assets/fontawesome/css/solid.min.css?v=7.3.1">
-<link rel="stylesheet" href="assets/fontawesome/css/brands.min.css?v=7.3.1">
-<link rel="stylesheet" href="style.css?v=1.3.0">
+<link rel="icon" type="image/png" href="../assets/icon.png?v=1.3.0">
+<link rel="shortcut icon" href="../assets/favicon.ico?v=1.3.0">
+<link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.min.css?v=7.3.1">
+<link rel="stylesheet" href="../assets/fontawesome/css/solid.min.css?v=7.3.1">
+<link rel="stylesheet" href="../assets/fontawesome/css/brands.min.css?v=7.3.1">
+<link rel="stylesheet" href="../style.css?v=1.3.0">
 </head>
 <body>
 
@@ -36,16 +36,16 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="/" class="brand">
-      <img src="assets/logo.png?v=1.3.0" alt="TS4RLS" class="brand-logo">
+      <img src="../assets/logo.png?v=1.3.0" alt="TS4RLS" class="brand-logo">
     </a>
     <nav class="site-nav">
       <a href="/#features">Features</a>
       <a href="/#how-it-works">How it works</a>
       <a href="/engine">Engine</a>
       <a href="/steam">Steam Artwork</a>
-      <a href="/guides">Guides</a>
+      <a href="/guides" class="active">Guides</a>
       <a href="/changelogs">Changelogs</a>
-      <a href="/releases" class="active">Releases</a>
+      <a href="/releases">Releases</a>
       <a href="/#get-started">Get started</a>
       <a href="https://github.com/TS4RLS/Engine" class="nav-gh"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
     </nav>
@@ -62,49 +62,63 @@
 </header>
 
 <main id="top">
-
-  <section class="hero profiles-hero">
+  <section class="hero legal-hero">
     <div class="container hero-inner">
-      <h1 class="page-title">Releases</h1>
-      <p class="hero-meta">
-        <span class="badge" data-version="engine" data-version-prefix="Engine ">Engine vX.Y.Z</span>
-        <span class="badge">Windows &middot; macOS &middot; Linux</span>
-      </p>
-      <p class="hero-sub">
-        Standalone executables — no Python install needed. Every release
-        below is fetched live from
-        <a href="https://github.com/TS4RLS/Engine/releases" target="_blank" rel="noopener">github.com/TS4RLS/Engine/releases</a>.
-      </p>
-      <p class="hero-warning">
-        The text-menu CLI was discontinued in Engine v3.0.0 and is no
-        longer built or supported — releases before that version still
-        list a CLI download for reference, but only the GUI (plus
-        <code>--generate</code> for headless use) ships from here on.
-      </p>
-      <div class="hero-actions">
-        <a href="/assets/steam" class="btn btn-ghost"><i class="fa-brands fa-steam" aria-hidden="true"></i> Download Steam artwork (.zip)</a>
-      </div>
+      <h1 class="page-title"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux Guide</h1>
+      <p class="hero-sub">Fully supported - a Tk system library and a Proton-prefix path to know about.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
+      <a href="/guides" class="legal-back">&larr; All guides</a>
+      <div class="legal-prose">
 
-      <div id="releases-status" class="release-status">Loading releases from
-        <a href="https://github.com/TS4RLS/Engine/releases" target="_blank" rel="noopener">github.com/TS4RLS/Engine</a>&hellip;</div>
+        <h2>Standalone binary (recommended)</h2>
+        <p>Grab <code>TS4RLS-linux</code> from the
+        <a href="/releases">Releases page</a>, then make it executable and run it:</p>
+        <pre class="code-block"><code>chmod +x TS4RLS-linux
+./TS4RLS-linux</code></pre>
+        <p>No Python install needed - it's a self-contained PyInstaller
+        build. There's no desktop entry/launcher shipped; run it directly
+        from a terminal or file manager.</p>
 
-      <div id="releases-list" class="release-list"></div>
+        <h2>Tk system libraries</h2>
+        <p>The GUI is built on Tkinter, which needs Tcl/Tk's own shared
+        libraries at runtime. Most desktop distros already have these, but
+        minimal/server installs and some containers don't. If the GUI
+        fails to start, install them - on Debian/Ubuntu:</p>
+        <pre class="code-block"><code>sudo apt-get install tk</code></pre>
+        <p>Other distros: look for the equivalent <code>tk</code> (or
+        <code>tcl-tk</code>) package in your package manager.</p>
 
+        <h2>Running from source</h2>
+        <pre class="code-block"><code>git clone https://github.com/TS4RLS/Engine.git
+cd Engine
+pip install -r requirements.txt
+python gui.py</code></pre>
+        <p>Add <code>--generate</code> to run headlessly (one-shot, no GUI)
+        instead.</p>
+
+        <h2>Finding your Mods folder under Proton</h2>
+        <p>TS4RLS's automatic Mods-folder detection only knows about
+        Windows and macOS install layouts, so on Linux you'll need to
+        browse to it manually. Playing through Steam Play/Proton, it's
+        usually under your compatdata prefix:</p>
+        <pre class="code-block"><code>~/.steam/steam/steamapps/compatdata/&lt;appid&gt;/pfx/drive_c/users/steamuser/Documents/Electronic Arts/The Sims 4/Mods</code></pre>
+        <p>Create the <code>Mods</code> folder yourself if it doesn't
+        exist yet.</p>
+
+      </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
       <a href="/" class="footer-brand-link">
-        <img src="assets/icon.png?v=1.3.0" alt="" class="footer-icon">
+        <img src="../assets/icon.png?v=1.3.0" alt="" class="footer-icon">
         <span>TS4RLS</span>
       </a>
       <p class="footer-tagline">The Sims 4 Random Loading Screen</p>
@@ -140,9 +154,8 @@
   </div>
 </footer>
 
-<script src="script.js?v=1.3.0"></script>
-<script src="dev-config.js?v=1.3.0"></script>
-<script src="versions.js?v=1.3.0"></script>
-<script src="releases.js?v=1.3.0"></script>
+<script src="../script.js?v=1.3.0"></script>
+<script src="../dev-config.js?v=1.3.0"></script>
+<script src="../versions.js?v=1.3.0"></script>
 </body>
 </html>

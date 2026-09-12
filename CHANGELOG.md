@@ -4,6 +4,29 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.5.0] - 2026-09-13
+
+### Added
+- **`/legal`** (`legal.html`) + `legal/{privacy,terms,cookies,imprint,disclaimer,opt-out}.html`:
+  the "Boring Legal Stuff" hub, ported from the TWRAR/Website pattern and
+  rewritten for TS4RLS's own content (what the Engine actually does/
+  collects, GPL-3.0-or-later, the EA/Maxis disclaimer, etc.) — the
+  footer's `/legal` link across every existing page finally resolves to
+  something instead of 404ing.
+- **`/guides`** (`guides.html`) + `guides/{windows,macos,linux}.html`:
+  per-platform setup notes (standalone executable, running from source,
+  Mods-folder auto-detection/manual lookup including the Proton-prefix
+  path on Linux, and platform-specific troubleshooting), same pattern as
+  TWRAR/Website. Distinct from the existing `/guides/steam` page, which
+  it cross-links.
+- A "Guides" nav link and footer link added to every existing page
+  (`index.html`, `releases.html`, `steam.html`, `guides/steam.html`).
+
+### Changed
+- Nav label reworded from bare "Steam" to "Steam Artwork" site-wide —
+  "Steam" on its own read like a platform-availability claim rather than
+  a link to the library artwork.
+
 ## [1.4.0] - 2026-09-12
 
 ### Added

@@ -9,18 +9,18 @@
   } catch (e) {}
 })();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Releases — TS4RLS</title>
-<meta name="description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<link rel="canonical" href="https://ts4rls.stuxie.dev/releases">
+<title>Guides — TS4RLS</title>
+<meta name="description" content="Platform setup guides for TS4RLS: Windows, macOS, and Linux.">
+<link rel="canonical" href="https://ts4rls.stuxie.dev/guides">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TS4RLS">
-<meta property="og:title" content="Releases — TS4RLS">
-<meta property="og:description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
-<meta property="og:url" content="https://ts4rls.stuxie.dev/releases">
+<meta property="og:title" content="Guides — TS4RLS">
+<meta property="og:description" content="Platform setup guides for TS4RLS: Windows, macOS, and Linux.">
+<meta property="og:url" content="https://ts4rls.stuxie.dev/guides">
 <meta property="og:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.3.0">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Releases — TS4RLS">
-<meta name="twitter:description" content="Every TS4RLS Engine release, with standalone Windows/macOS/Linux executables, fetched live from GitHub.">
+<meta name="twitter:title" content="Guides — TS4RLS">
+<meta name="twitter:description" content="Platform setup guides for TS4RLS: Windows, macOS, and Linux.">
 <meta name="twitter:image" content="https://ts4rls.stuxie.dev/assets/logo.png?v=1.3.0">
 <link rel="icon" type="image/png" href="assets/icon.png?v=1.3.0">
 <link rel="shortcut icon" href="assets/favicon.ico?v=1.3.0">
@@ -43,9 +43,9 @@
       <a href="/#how-it-works">How it works</a>
       <a href="/engine">Engine</a>
       <a href="/steam">Steam Artwork</a>
-      <a href="/guides">Guides</a>
+      <a href="/guides" class="active">Guides</a>
       <a href="/changelogs">Changelogs</a>
-      <a href="/releases" class="active">Releases</a>
+      <a href="/releases">Releases</a>
       <a href="/#get-started">Get started</a>
       <a href="https://github.com/TS4RLS/Engine" class="nav-gh"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
     </nav>
@@ -63,38 +63,40 @@
 
 <main id="top">
 
-  <section class="hero profiles-hero">
+  <section class="hero legal-hero">
     <div class="container hero-inner">
-      <h1 class="page-title">Releases</h1>
-      <p class="hero-meta">
-        <span class="badge" data-version="engine" data-version-prefix="Engine ">Engine vX.Y.Z</span>
-        <span class="badge">Windows &middot; macOS &middot; Linux</span>
-      </p>
+      <h1 class="page-title">Guides</h1>
       <p class="hero-sub">
-        Standalone executables — no Python install needed. Every release
-        below is fetched live from
-        <a href="https://github.com/TS4RLS/Engine/releases" target="_blank" rel="noopener">github.com/TS4RLS/Engine/releases</a>.
+        Platform-specific setup notes for TS4RLS - install, first run, and
+        anything that behaves differently on your OS.
       </p>
-      <p class="hero-warning">
-        The text-menu CLI was discontinued in Engine v3.0.0 and is no
-        longer built or supported — releases before that version still
-        list a CLI download for reference, but only the GUI (plus
-        <code>--generate</code> for headless use) ships from here on.
-      </p>
-      <div class="hero-actions">
-        <a href="/assets/steam" class="btn btn-ghost"><i class="fa-brands fa-steam" aria-hidden="true"></i> Download Steam artwork (.zip)</a>
-      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-
-      <div id="releases-status" class="release-status">Loading releases from
-        <a href="https://github.com/TS4RLS/Engine/releases" target="_blank" rel="noopener">github.com/TS4RLS/Engine</a>&hellip;</div>
-
-      <div id="releases-list" class="release-list"></div>
-
+      <div class="legal-grid">
+        <a href="/guides/windows" class="legal-card">
+          <h3><i class="fa-brands fa-windows" aria-hidden="true"></i> Windows</h3>
+          <p>The primary platform - standalone .exe, no console window.</p>
+        </a>
+        <a href="/guides/macos" class="legal-card">
+          <h3><i class="fa-brands fa-apple" aria-hidden="true"></i> macOS</h3>
+          <p>Gatekeeper, the .app bundle, and where the Mods folder lives.</p>
+        </a>
+        <a href="/guides/linux" class="legal-card">
+          <h3><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux</h3>
+          <p>The standalone binary, Tk system libraries, and Proton.</p>
+        </a>
+      </div>
+      <p class="section-note">
+        Looking for the Steam library artwork guide instead? See
+        <a href="/guides/steam">Adding TS4RLS to Steam</a>.
+      </p>
+      <p class="section-note">
+        Something missing or wrong? Open an issue on
+        <a href="https://github.com/TS4RLS/Engine/issues">GitHub</a>.
+      </p>
     </div>
   </section>
 
@@ -143,6 +145,5 @@
 <script src="script.js?v=1.3.0"></script>
 <script src="dev-config.js?v=1.3.0"></script>
 <script src="versions.js?v=1.3.0"></script>
-<script src="releases.js?v=1.3.0"></script>
 </body>
 </html>
