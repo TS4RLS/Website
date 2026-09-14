@@ -4,6 +4,19 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.9.1] - 2026-09-14
+
+### Changed
+- **`steam.html` no longer stores its own copy of Steam artwork.**
+  `assets/steam/` here was a stale, manually-dropped duplicate that
+  nothing kept in sync — removed it entirely; the page's preview images
+  now hotlink the Engine repo's raw GitHub URLs directly (the single
+  source of truth).
+- **The preview gallery only showed 2 of the 6 generated assets**
+  (grid capsule and hero, each standing in for a pair). Expanded to one
+  card per actual file: both grid capsule orientations, the hero, and
+  both logo variants, plus the small library icon.
+
 ## [1.9.0] - 2026-09-13
 
 ### Added
