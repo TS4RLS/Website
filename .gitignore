@@ -3,3 +3,6 @@ dev-config.js
 
 .DS_Store
 Thumbs.db
+
+# Python bytecode (dev-server.py / tests)
+__pycache__/

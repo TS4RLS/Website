@@ -4,6 +4,16 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.9.5] - 2026-09-26
+
+### Changed
+- Changelog pages now sort each release's `###` sections into a fixed order at render time — Added, Changed, Fixed, Removed, Security, Deprecated, with unknown types (e.g. "Breaking Changes") last — instead of trusting the markdown's order.
+- Changelog badges use the shared type palette: Added `#2ecc71`, Changed `#3ba7ff`, Fixed `#ffa64d`, Removed `#ff4d4d`, Security `#b06bff`, Deprecated `#8a8a94` (darker shades of the same hues on the light theme). Deprecated sections get their own badge instead of the generic one.
+- `.gitignore` now ignores Python `__pycache__/` directories.
+
+### Security
+- `dev-server.py`'s `/dev-sibling/<repo>/...` route now refuses any path that resolves outside the sibling checkout (`..` segments, absolute paths, symlinks pointing out) and answers it with a plain 404, so the local dev server can't be used to read arbitrary files. Covered by the new `tests/test_dev_server.py`.
+
 ## [1.9.4] - 2026-09-23
 
 ### Fixed
