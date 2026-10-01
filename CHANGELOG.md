@@ -4,6 +4,12 @@ All notable changes to this repo are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the Engine's own version.
 
+## [1.10.2] - 2026-10-01
+
+### Changed
+
+- The footer's copyright year is worked out automatically: the start year alone in the first year, then START–CURRENT
+
 ## [1.10.1] - 2026-10-01
 
 ### Fixed
