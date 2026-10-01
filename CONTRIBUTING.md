@@ -37,6 +37,10 @@ reference across every page, to that same version — it exists purely to
 bust browser caches on release, so it needs to move every time or
 visitors can keep serving a stale cached copy indefinitely.
 
+## Sitemap
+
+`sitemap.xml`, `sitemap/index.html` and `robots.txt` are generated: after adding or removing a public page, edit the `PAGES` list in `scripts/build-sitemap.py`, run `python scripts/build-sitemap.py`, and commit the result. `python -m unittest discover -s tests` checks them.
+
 ## Deploying
 
 Merges to `main` publish automatically via GitHub Pages — no separate

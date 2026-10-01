@@ -3,12 +3,11 @@
 
 Serves this folder the way GitHub Pages does. DEV_MODE is forced on by
 default: it writes dev-config.js (gitignored, never deployed), which
-reveals the `#dev-banner` element the page already carries (hidden by
-default) -- same env-banner treatment as TIGHC's Website -- and sets up
-window.TS4RLS_DEV so scripts like changelogs.js and versions.js can read
+defines window.TS4RLS_DEV, which assets/site-banners.js uses to show the dev
+banner and which scripts like changelogs.js and versions.js use to read
 Engine content from the sibling checkout (../Engine) instead of GitHub.
-Pass --no-dev-mode to skip all of that, matching production (the banner
-then stays hidden, since dev-config.js is never written).
+Pass --no-dev-mode to skip all of that, matching production (no banner,
+since dev-config.js is never written).
 """
 import http.server
 import os
@@ -73,15 +72,6 @@ def write_dev_config(dev_mode, port):
         "  },",
         "  port: %d" % port,
         "};",
-        "(function () {",
-        "  var banner = document.getElementById('dev-banner');",
-        "  var detail = document.getElementById('dev-banner-detail');",
-        "  if (detail) {",
-        "    detail.textContent = 'TS4RLS Website running on :' + window.TS4RLS_DEV.port +",
-        "      ' \\u2014 Engine content served from the local sibling checkout, not GitHub.';",
-        "  }",
-        "  if (banner) banner.hidden = false;",
-        "})();",
         "console.log('[TS4RLS dev mode] Engine/Website content is loaded from local sibling checkouts, not GitHub.');",
     ]
     with open(path, "w", encoding="utf-8") as f:

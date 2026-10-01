@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ts4rls.stuxie.dev/sitemap.xml
