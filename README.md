@@ -106,9 +106,7 @@ every push and pull request.
 
 ## Versioning
 
-Follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`),
-independently of the Engine's own version — see
-[CHANGELOG.md](CHANGELOG.md) for what changed in each release.
+This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
 ## License
 

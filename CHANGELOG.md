@@ -1,8 +1,26 @@
 # Changelog
 
 All notable changes to this repo are documented here. Versioning follows
-[Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
-of the Engine's own version.
+[Date Versioning](https://datevers.ing) (`YY.MM.DD`), independent of the
+Engine's own version.
+
+Since v26.10.23 this project uses [Date Versioning](https://datevers.ing) (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used Semantic Versioning.
+
+## v26.10.23
+
+### Added
+
+- A Discord component embed (`<script id="discord:component-embed">`) in the `<head>` of every page except the 404 and redirect pages, giving link previews a title, description and link buttons; `scripts/build-discord-embeds.py` regenerates them
+- A full favicon set: `favicon.ico`, `apple-touch-icon.png` and `site.webmanifest` (with 192, 512 and maskable icons), linked from every page
+- `tests/discord-embed.test.js`, which checks the embeds and favicon tags on every page, and a changelog parser test for Date Version headings
+- `tests/version.sh`, which checks that `VERSION.md` is a valid Date Version, a real calendar date not in the future, and the same as the newest entry in this changelog
+
+### Changed
+
+- Switched from Semantic Versioning to [Date Versioning](https://datevers.ing): releases are numbered by their UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. This release follows v1.10.2
+- `commit.sh` and `commit.bat` refuse a `VERSION.md` that isn't a valid Date Version or is dated in the future (UTC), and warn when it's dated before today
+- Cache-busting `?v=` query strings and the sitemap's last-modified dates follow the new version and date
+- `README.md` and `CONTRIBUTING.md` describe Date Versioning and the release steps
 
 ## [1.10.2] - 2026-10-01
 
